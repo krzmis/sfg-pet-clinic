@@ -1,12 +1,18 @@
 package com.example.sfgpetclinic.services.map;
 
 import com.example.sfgpetclinic.model.Owner;
-import com.example.sfgpetclinic.services.CrudService;
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import com.example.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends MapService<Owner, Long> implements CrudService<Owner, Long> {
+@Service
+public class OwnerServiceMap extends MapService<Owner, Long> implements OwnerService {
+
+    @Override
+    public Owner findLastName(String lastName) {
+        return null;
+    }
 
     @Override
     public Set<Owner> findAll() {
